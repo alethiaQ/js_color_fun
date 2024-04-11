@@ -3,16 +3,16 @@ let div = document.createElement('div');
 div.id = "matrixDiv";
 body.appendChild(div);
 
-let box_amount = 8;
-let y = 5;
+let rows = 15;
+let cols = 25;
 let html_str = '';
 let matrix = [];
 
-for (let i = 0; i < box_amount; i++) {
+for (let i = 0; i < rows; i++) {
     matrix[i] = [];
-    for (let s = 0; s < y; s++) {
+    for (let s = 0; s < cols; s++) {
         matrix[i][s] = i;
-        html_str += " <span class=square> </span>  ";
+        html_str += ` <span class=square id=${i+s}> </span>  `;
     };
     html_str += "<br>";
 };
